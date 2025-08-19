@@ -1,9 +1,14 @@
 .home {
+  background-color: #141414; /* Netflix dark background */
+  min-height: 100vh;
   padding: 2rem 0;
   width: 100%;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: white;
 }
 
+/* Search Bar */
 .search-form {
   max-width: 600px;
   margin: 0 auto 2rem;
@@ -16,47 +21,67 @@
 .search-input {
   flex: 1;
   padding: 0.75rem 1rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 20px; /* pill shape */
+  background-color: #222;
   color: white;
   font-size: 1rem;
+  transition: all 0.2s ease;
 }
 
 .search-input:focus {
+  border-color: #e50914;
+  box-shadow: 0 0 6px rgba(229, 9, 20, 0.6);
   outline: none;
-  box-shadow: 0 0 0 2px #666;
 }
 
+/* Search Button */
 .search-button {
   padding: 0.75rem 1.5rem;
   background-color: #e50914;
   color: white;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: background-color 0.2s;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .search-button:hover {
   background-color: #f40612;
+  box-shadow: 0 0 8px rgba(229, 9, 20, 0.8);
+  transform: scale(1.05);
 }
 
-@media (max-width: 639px) {
-  .home {
-    padding: 1rem 0;
-  }
-
+/* Responsive: Stack input & button on small screens */
+@media (max-width: 500px) {
   .search-form {
-    margin-bottom: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .search-button {
+    width: 100%;
   }
 }
 
+/* Movies Grid */
 .movies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   padding: 1rem;
   width: 100%;
   box-sizing: border-box;
+}
+
+/* Movie Card Hover */
+.movies-grid > * {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movies-grid > *:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
