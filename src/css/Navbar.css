@@ -1,17 +1,30 @@
 .navbar {
-  background-color: #000000;
+  background-color: #141414; /* Netflix dark */
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky; /* stays on top */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
+/* Brand (Logo / Title) */
 .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e50914; /* Netflix red */
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
+.navbar-brand:hover {
+  color: #f40612;
+}
+
+/* Links */
 .navbar-links {
   display: flex;
   gap: 2rem;
@@ -19,22 +32,28 @@
 
 .nav-link {
   font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.2s;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(229, 9, 20, 0.2);
+  color: #e50914;
+  transform: scale(1.05);
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
   }
 
   .navbar-brand {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .navbar-links {
@@ -42,6 +61,7 @@
   }
 
   .nav-link {
-    padding: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
   }
 }
