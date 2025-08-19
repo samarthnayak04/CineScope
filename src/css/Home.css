@@ -1,7 +1,7 @@
 .home {
-  background-color: #141414; /* Netflix dark background */
+  background-color: #222; /* Netflix dark background */
   min-height: 100vh;
-  padding: 2rem 0;
+  padding: 0.5rem 0 2rem;
   width: 100%;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;

@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #141414; /* Netflix dark */
+  background-color: #1e1b1b; /* Netflix dark */
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -54,6 +54,8 @@
 
   .navbar-brand {
     font-size: 1.4rem;
+    font-weight: bold;
+    color: #e50914;
   }
 
   .navbar-links {
@@ -61,7 +63,14 @@
   }
 
   .nav-link {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .nav-link:hover {
+    color: #e50914;
+    background-color: rgba(229, 9, 20, 0.2);
   }
 }
